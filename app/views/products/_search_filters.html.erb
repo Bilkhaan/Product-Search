@@ -1,0 +1,35 @@
+<div class="search-container pt-5">
+  <%= form_tag(root_path, method: :get) do %>
+    <div class="form-row form-group">
+      <div class="col-9">
+        <%= text_field_tag :title, searched_params[:title], class: 'form-control', placeholder: 'Search a keyword' %>
+      </div>
+      <div class="col-3">
+        <%= select_tag :sort, options_for_select(PRODUCTS_SORT_OPTIONS, searched_params[:sort]), include_blank: "Sort", class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-3 col-sm-12">
+        <label for="price">Price</label>
+        <%= number_field_tag :price, searched_params[:price], class: 'form-control', placeholder: 'e.g 13' %>
+      </div>
+      <div class="form-group col-md-3 col-sm-12">
+        <label for="price-variant">Price Variant</label>
+        <%= select_tag :price_variant, options_for_select(PRODUCT_PRICE_VARIANTS, searched_params[:price_variant]), class: 'form-control' %>
+      </div>
+      <div class="form-group col-md-3 col-sm-12">
+        <label for="price">Country</label>
+        <%= text_field_tag :country, searched_params[:country], class: 'form-control', placeholder: 'e.g Canada' %>
+      </div>
+      <div class="form-group col-md-3 col-sm-12">
+        <label for="price">
+          Tags
+          <small>: comma separated input</small>
+        </label>
+        <%= text_field_tag :tags, searched_params[:tags], class: 'form-control', placeholder: 'e.g backwoods, shirt' %>
+      </div>
+    </div>
+
+    <%= submit_tag 'Search', name: nil, class: 'btn btn-primary mt-4' %>
+  <% end %>
+</div>

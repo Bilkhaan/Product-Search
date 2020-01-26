@@ -1,0 +1,23 @@
+<div class="row mt-4">
+  <div class="col-12">
+    <div class="table-responsive mb-3">
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" class="wp-20">Title</th>
+            <th scope="col" class="wp-30">Description</th>
+            <th scope="col" class="wp-13">Country</th>
+            <th scope="col" class="wp-17">Tags</th>
+            <th scope="col" class="wp-9">Price</th>
+            <th scope="col" class="wp-11">Created at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render products %>
+        </tbody>
+      </table>
+    </div>
+
+    <%= paginate products %>
+  </div>
+</div>
