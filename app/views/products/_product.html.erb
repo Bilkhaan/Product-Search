@@ -1,6 +1,6 @@
 <tr>
   <td>
-    <%= product.title %>
+    <%= link_to product.title, product_path(product.id, format: 'js'), remote: true %>
   </td>
   <td>
     <%= product.description %>

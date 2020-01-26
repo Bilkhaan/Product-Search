@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
     @products = Products::SearchService.new.apply_search(@searched_params)
   end
 
+  def show
+    @product = Products::ProductService.new.find_by(id: params[:id])
+  end
+
   private
 
   def search_params

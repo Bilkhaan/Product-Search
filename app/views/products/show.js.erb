@@ -1,0 +1,7 @@
+<% if @product %>
+  $('#product-title').text("<%= @product.title %>")
+  $('#product-description').text("<%= @product.description %>")
+  $('#product-price').text("<%= @product.price %>")
+
+  $('#product-show').modal('show')
+<% end %>
