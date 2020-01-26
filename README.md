@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To load data, Please run seeds file. 
+Searchkick is used for handling search functionality
 
 Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
+* Ruby version 2.6.3
 
 * Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+You need to create your own database.yml file
 
 * ...
